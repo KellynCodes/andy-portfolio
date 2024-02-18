@@ -1,6 +1,4 @@
 window.addEventListener("DOMContentLoaded", () => {
-  "use strict";
-
   /**
    * Easy selector helper function
    */
@@ -153,7 +151,7 @@ window.addEventListener("DOMContentLoaded", () => {
         layoutMode: "fitRows",
       });
 
-      let portfolioFilters = select("#portfolio-flters li", true);
+      let portfolioFilters = select("#portfolio-filters li", true);
 
       on(
         "click",
@@ -179,23 +177,6 @@ window.addEventListener("DOMContentLoaded", () => {
    */
   const portfolioLightbox = GLightbox({
     selector: ".portfolio-lightbox",
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper(".portfolio-details-slider", {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-    },
   });
 
   /**
