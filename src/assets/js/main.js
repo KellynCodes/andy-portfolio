@@ -1,4 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
+  "use strict";
+
   /**
    * Easy selector helper function
    */
