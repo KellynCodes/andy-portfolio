@@ -145,34 +145,32 @@ window.addEventListener("DOMContentLoaded", () => {
   /**
    * Porfolio isotope and filter
    */
-  window.addEventListener("load", () => {
-    let portfolioContainer = select(".portfolio-container");
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: ".portfolio-item",
-        layoutMode: "fitRows",
-      });
+  let portfolioContainer = select(".portfolio-container");
+  if (portfolioContainer) {
+    let portfolioIsotope = new Isotope(portfolioContainer, {
+      itemSelector: ".portfolio-item",
+      layoutMode: "fitRows",
+    });
 
-      let portfolioFilters = select("#portfolio-filters li", true);
+    let portfolioFilters = select("#portfolio-filters li", true);
 
-      on(
-        "click",
-        "#portfolio-flters li",
-        function (e) {
-          e.preventDefault();
-          portfolioFilters.forEach(function (el) {
-            el.classList.remove("filter-active");
-          });
-          this.classList.add("filter-active");
+    on(
+      "click",
+      "#portfolio-filters li",
+      function (e) {
+        e.preventDefault();
+        portfolioFilters.forEach(function (el) {
+          el.classList.remove("filter-active");
+        });
+        this.classList.add("filter-active");
 
-          portfolioIsotope.arrange({
-            filter: this.getAttribute("data-filter"),
-          });
-        },
-        true
-      );
-    }
-  });
+        portfolioIsotope.arrange({
+          filter: this.getAttribute("data-filter"),
+        });
+      },
+      true
+    );
+  }
 
   /**
    * Initiate portfolio lightbox
@@ -184,11 +182,9 @@ window.addEventListener("DOMContentLoaded", () => {
   /**
    * Scroll with ofset on page load with hash links in the url
    */
-  window.addEventListener("load", () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash);
-      }
+  if (window.location.hash) {
+    if (select(window.location.hash)) {
+      scrollto(window.location.hash);
     }
-  });
+  }
 });
