@@ -1,5 +1,5 @@
 export enum FilterBy {
-  APP,
-  WEB,
-  CARD,
+  ALL = 'all',
+  WEB = 'web',
+  FLIERS = 'flier',
 }

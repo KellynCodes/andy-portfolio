@@ -16,7 +16,7 @@ export class Navbar {
     this.window?.addEventListener('scroll', () => {
       const header: HTMLElement | null = this.document.querySelector('#header');
       if (this.window?.scrollY! > 700 && header) {
-        header.style.background = 'black';
+        header.style.background = 'rgba(0, 0, 0, 0.8)';
       } else {
         header!.style.removeProperty('background');
       }

@@ -18,15 +18,15 @@ import { RouterOutlet } from '@angular/router';
         <h3>Welcome, <strong>You're with Andy</strong></h3>
         <h1>I Create what you imagine.</h1>
         <h2>I bring your ideas in to reality.</h2>
-        <a href="#about" class="btn-get-started scrollto">Contact Me</a>
+        <a href="#about" class="btn-get-started scrollto">Learn More</a>
       </div>
     </section>
     <!-- End Hero -->
     <main id="main">
       <andy-about />
       <andy-services />
-      <andy-cta />
       <andy-portfolio />
+      <andy-cta />
       <andy-faq />
       <andy-contact />
     </main>

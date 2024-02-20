@@ -4,25 +4,22 @@
     <div class="section-title">
       <h2>Portfolio</h2>
       <h3>Check My <span> Works</span></h3>
-      <p>
-        Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
-        adipisci expedita at voluptas atque vitae autem.
-      </p>
+      <p>I design what you and your audience would love to see.</p>
     </div>
 
     <div class="row">
       <div class="col-lg-12 d-flex justify-content-center">
         <ul id="portfolio-filters">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".flier">Flier</li>
-          <li data-filter=".web">Web</li>
+          <li class="filter-active" (click)="updateProjects(0, 9)">All</li>
+          <li (click)="updateProjects(0, 9, filterBy.FLIERS)">Flier</li>
+          <li (click)="updateProjects(0, 9, filterBy.WEB)">Web</li>
         </ul>
       </div>
     </div>
 
     <div class="row portfolio-container">
-      @for (project of projects; track project.id) {
-      <div class="col-lg-4 col-md-6 portfolio-item {{project.filterBy}}">
+      @for (project of projects(); track project.id) {
+      <div class="col-lg-4 col-md-6 portfolio-item">
         <a
           [href]="project.image"
           data-gallery="portfolioGallery"
@@ -56,6 +53,25 @@
       </div>
       }
     </div>
+  </div>
+  <div class="btn-container">
+    @switch (numberOrProjects()) { @case(false) {
+    <a
+      href="#portfolio"
+      type="button"
+      (click)="updateProjects(0,9)"
+      class="btn-get-started mx-auto"
+    >
+      View Less
+    </a>
+    } @case (true) {
+    <button
+      type="button"
+      (click)="updateProjects(0, projectLength)"
+      class="btn-get-started"
+    >
+      View More</button
+    >} @default {} }
   </div>
 </section>
 <!-- End Portfolio Section -->
