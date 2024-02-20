@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Signal,
-  signal,
-} from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { projects, FilterBy, ProjectDto } from '../../core';
 import { RouterLink } from '@angular/router';
 
@@ -79,5 +74,8 @@ export class Portfolio {
         return projects.length > this.projects().length;
       });
     }
+    // GLightbox({
+    //   selector: '.portfolio-lightbox',
+    // });
   }
 }

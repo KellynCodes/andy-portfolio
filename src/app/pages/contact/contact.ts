@@ -41,13 +41,13 @@ export class Contact {
     try {
       this.isSending.set(true);
       const response = await emailJs.send(
-        'service_i2c31r8',
-        'template_us3scl7',
+        'service_oya6r0g',
+        'template_232x2t3',
         {
-          to_name: 'Any',
+          to_name: 'Andy Graphics',
           ...this.contactForm.value,
         },
-        'UQiKJHtSM88EGtWsp'
+        'cuPw9ojL2RTSlbEgt'
       );
       if (response.status != HttpStatusCode.Ok) {
         this.isSending.set(false);
