@@ -1,2 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/cdk/overlay-prebuilt.css";
+
+/* Define the styles for the scrollbar track and thumb */
+/* Define the styles for the scrollbar track and thumb */
+/* This will work in some modern browsers (e.g., Chrome) */
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+}
+
+/* Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #e43c5c; /* color of the thumb on hover */
+  border-radius: 6px; /* rounded corners of the thumb */
+}
+
+/* Handle when the user hovers over the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e43c5c; /* color of the thumb on hover */
+}
+
+/* Track (background of the scrollbar) when not hovering over the thumb */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle when the user hovers over the track */
+::-webkit-scrollbar-track:hover {
+  background: #ddd;
+}
+
+/* Corner (between the vertical and horizontal scrollbars) */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}
