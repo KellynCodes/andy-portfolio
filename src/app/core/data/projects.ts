@@ -147,13 +147,7 @@ export const projects: ProjectDto[] = [
     image: '../../../assets/img/projects/perfume-design.jpg',
     filterBy: 'flier',
   },
-  {
-    id: 'afikdf5903kr9er-dkfqe-hgfxYadowldowe',
-    title: 'calender',
-    desc: '',
-    image: '../../../assets/img/projects/calender.png',
-    filterBy: 'calender',
-  },
+
   {
     id: 'aidfkdaf-onerelfl37jhetyekflkfsgsgfsg45rgdowe',
     title: 'certificate',
