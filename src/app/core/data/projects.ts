@@ -134,11 +134,46 @@ export const projects: ProjectDto[] = [
     filterBy: 'flier',
   },
   {
-    id: 'afikdfaoeifaeofxYadowldkwofhiowe',
+    id: 'afikdfaoeifae43348349hid9wi9ldkwofhiowe',
     title: 'flier',
     desc: '',
-    image: '../../../assets/img/projects/on-photo-studio.jpg',
+    image: '../../../assets/img/projects/flier-15.jpg',
     filterBy: 'flier',
+  },
+  {
+    id: 'afgaedfq343654634g34g3xYadowldkwofhiowe',
+    title: 'flier',
+    desc: '',
+    image: '../../../assets/img/projects/perfume-design.jpg',
+    filterBy: 'flier',
+  },
+  {
+    id: 'afikdf5465668787jhetyehgfxYadowldowe',
+    title: 'calender',
+    desc: '',
+    image: '../../../assets/img/projects/calender.png',
+    filterBy: 'calender',
+  },
+  {
+    id: 'aidfkdaf-onerelfl37jhetyekflkfsgsgfsg45rgdowe',
+    title: 'certificate',
+    desc: '',
+    image: '../../../assets/img/projects/certificate.jpg',
+    filterBy: 'certificate',
+  },
+  {
+    id: 'fgw490-trkowjrwt450jero-wtfsg45rgdowe',
+    title: 'certificate',
+    desc: '',
+    image: '../../../assets/img/projects/certificate-2.jpg',
+    filterBy: 'certificate',
+  },
+  {
+    id: 'afikdf546gsfglskfflsg786767ruyur867-wldowe',
+    title: 'Book Cover',
+    desc: '',
+    image: '../../../assets/img/projects/book-cover.jpg',
+    filterBy: 'book',
   },
 ];
 
