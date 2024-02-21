@@ -1,10 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { projects, FilterBy, ProjectDto } from '../../core';
 import { RouterLink } from '@angular/router';
+import { Gallery, GalleryItem, ImageItem } from 'ng-gallery';
+import { LightboxModule } from 'ng-gallery/lightbox';
 
 @Component({
   selector: 'andy-portfolio',
   templateUrl: './portfolio.html',
+  standalone: true,
+  imports: [RouterLink, LightboxModule],
   styles: `.portfolio-image {
   width: 100%;
   height: 20rem;
@@ -43,8 +47,6 @@ align-items: center;
 }
 
 `,
-  standalone: true,
-  imports: [RouterLink],
 })
 export class Portfolio {
   filterBy = FilterBy;
@@ -52,9 +54,11 @@ export class Portfolio {
   projects = signal<ProjectDto[]>(projects);
   numberOrProjects = signal<boolean | null>(true);
 
-  constructor() {
+  constructor(public gallery: Gallery) {
     this.updateProjects(0, 9);
   }
+
+  ngOnInit() {}
 
   updateProjects(
     sliceFrom: number,
@@ -74,8 +78,9 @@ export class Portfolio {
         return projects.length > this.projects().length;
       });
     }
-    // GLightbox({
-    //   selector: '.portfolio-lightbox',
-    // });
+    const items: GalleryItem[] = this.projects().map(
+      (project) => new ImageItem({ src: project.image, thumb: project.image })
+    );
+    this.gallery.ref().load(items);
   }
 }

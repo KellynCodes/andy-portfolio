@@ -1,3 +1,4 @@
+import { LIGHTBOX_CONFIG, LightboxConfig } from 'ng-gallery/lightbox';
 import { ApplicationConfig } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
@@ -20,5 +21,12 @@ export const appConfig: ApplicationConfig = {
       positionClass: 'toast-top-center',
     }),
     provideAnimations(),
+    {
+      provide: LIGHTBOX_CONFIG,
+      useValue: {
+        keyboardShortcuts: false,
+        exitAnimationTime: 1000,
+      } as LightboxConfig,
+    },
   ],
 };

@@ -55,13 +55,11 @@
               "node_modules/boxicons/css/boxicons.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-              "src/assets/vendor/glightbox/css/glightbox.min.css",
               "src/assets/css/style.css",
               "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "src/assets/vendor/glightbox/js/glightbox.min.js",
               "node_modules/jquery/dist/jquery.min.js",
               "src/assets/js/main.js"
             ]

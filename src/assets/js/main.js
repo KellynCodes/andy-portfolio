@@ -161,13 +161,6 @@ window.addEventListener("DOMContentLoaded", () => {
   );
 
   /**
-   * Initiate portfolio lightbox
-   */
-  const portfolioLightbox = GLightbox({
-    selector: ".portfolio-lightbox",
-  });
-
-  /**
    * Scroll with ofset on page load with hash links in the url
    */
   if (window.location.hash) {
